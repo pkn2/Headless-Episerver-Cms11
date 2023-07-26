@@ -1,0 +1,29 @@
+﻿2023-07-26 00:20:02,981 [1] ERROR EPiServer.Framework.Initialization.InitializationEngine: Initialize action failed for 'Initialize on class EPiServer.ContentApi.Search.ContentApiSearchInitialization, EPiServer.ContentApi.Search, Version=2.21.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7'
+System.ArgumentException: A route named 'MS_attributerouteWebApi' is already in the route collection. Route names must be unique.
+Parameter name: name
+   at System.Web.Routing.RouteCollection.Add(String name, RouteBase item)
+   at System.Web.Http.WebHost.Routing.HostedHttpRouteCollection.Add(String name, IHttpRoute route)
+   at System.Web.Http.Routing.AttributeRoutingMapper.MapAttributeRoutes(HttpConfiguration configuration, IInlineConstraintResolver constraintResolver, IDirectRouteProvider directRouteProvider)
+   at System.Web.Http.HttpConfigurationExtensions.MapHttpAttributeRoutes(HttpConfiguration configuration)
+   at EPiServer.ContentApi.Search.ContentApiSearchInitialization.BuildDefaultHttpConfiguration(HttpConfiguration config)
+   at EPiServer.ContentApi.Search.ContentApiSearchInitialization.<Initialize>b__5_0(HttpConfiguration config)
+   at System.Web.Http.GlobalConfiguration.Configure(Action`1 configurationCallback)
+   at EPiServer.ContentApi.Search.ContentApiSearchInitialization.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.<>c__DisplayClass2_0.<Initialize>b__0()
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+System.ArgumentException: A route named 'MS_attributerouteWebApi' is already in the route collection. Route names must be unique.
+Parameter name: name
+   at System.Web.Routing.RouteCollection.Add(String name, RouteBase item)
+   at System.Web.Http.WebHost.Routing.HostedHttpRouteCollection.Add(String name, IHttpRoute route)
+   at System.Web.Http.Routing.AttributeRoutingMapper.MapAttributeRoutes(HttpConfiguration configuration, IInlineConstraintResolver constraintResolver, IDirectRouteProvider directRouteProvider)
+   at System.Web.Http.HttpConfigurationExtensions.MapHttpAttributeRoutes(HttpConfiguration configuration)
+   at EPiServer.ContentApi.Search.ContentApiSearchInitialization.BuildDefaultHttpConfiguration(HttpConfiguration config)
+   at EPiServer.ContentApi.Search.ContentApiSearchInitialization.<Initialize>b__5_0(HttpConfiguration config)
+   at System.Web.Http.GlobalConfiguration.Configure(Action`1 configurationCallback)
+   at EPiServer.ContentApi.Search.ContentApiSearchInitialization.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.<>c__DisplayClass2_0.<Initialize>b__0()
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()

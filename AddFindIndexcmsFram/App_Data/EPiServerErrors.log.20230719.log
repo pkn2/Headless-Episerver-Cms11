@@ -1,0 +1,107 @@
+﻿2023-07-19 02:45:51,249 [5] ERROR EPiServer.Global: Unhandled exception in ASP.NET
+System.Web.HttpException (0x80004005): The file '/link/43F936C99B234EA397B261C538AD07C9.aspx' does not exist.
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.Routing.PageRouteHandler.GetHttpHandler(RequestContext requestContext)
+   at EPiServer.Web.Routing.Internal.MultiplexingRouteHandler.GetHttpHandler(RequestContext requestContext)
+   at System.Web.Routing.UrlRoutingModule.PostResolveRequestCache(HttpContextBase context)
+   at System.Web.Routing.UrlRoutingModule.OnApplicationPostResolveRequestCache(Object sender, EventArgs e)
+   at System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+System.Web.HttpException (0x80004005): The file '/link/43F936C99B234EA397B261C538AD07C9.aspx' does not exist.
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.Routing.PageRouteHandler.GetHttpHandler(RequestContext requestContext)
+   at EPiServer.Web.Routing.Internal.MultiplexingRouteHandler.GetHttpHandler(RequestContext requestContext)
+   at System.Web.Routing.UrlRoutingModule.PostResolveRequestCache(HttpContextBase context)
+   at System.Web.Routing.UrlRoutingModule.OnApplicationPostResolveRequestCache(Object sender, EventArgs e)
+   at System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2023-07-19 02:55:51,198 [1] ERROR EPiServer.Framework.Initialization.InitializationEngine: Initialize action failed for 'Initialize on class EPiServer.Data.DataInitialization, EPiServer.Data, Version=11.15.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7'
+System.NotSupportedException: The database schema for 'EPiServer.Find.Cms' is not installed. Update the database manually by running the cmdlet 'Initialize-EPiDatabase' in the package manager console or set createDatabaseSchema="true" on episerver.framework configuration element.
+   at EPiServer.Data.SchemaUpdates.Internal.DatabaseSchemaManagerImplementation.ThrowCreateDatabaseException(String displayName)
+   at EPiServer.Data.SchemaUpdates.Internal.DatabaseSchemaManagerImplementation.EnsureDatabaseSchema(DataAccessOptions dataAccessOptions)
+   at EPiServer.Data.DataInitialization.ValidateDatabaseSchema(InitializationEngine context)
+   at EPiServer.Data.DataInitialization.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.<>c__DisplayClass2_0.<Initialize>b__0()
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+System.NotSupportedException: The database schema for 'EPiServer.Find.Cms' is not installed. Update the database manually by running the cmdlet 'Initialize-EPiDatabase' in the package manager console or set createDatabaseSchema="true" on episerver.framework configuration element.
+   at EPiServer.Data.SchemaUpdates.Internal.DatabaseSchemaManagerImplementation.ThrowCreateDatabaseException(String displayName)
+   at EPiServer.Data.SchemaUpdates.Internal.DatabaseSchemaManagerImplementation.EnsureDatabaseSchema(DataAccessOptions dataAccessOptions)
+   at EPiServer.Data.DataInitialization.ValidateDatabaseSchema(InitializationEngine context)
+   at EPiServer.Data.DataInitialization.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.<>c__DisplayClass2_0.<Initialize>b__0()
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+2023-07-19 02:57:01,289 [1] ERROR EPiServer.Framework.Initialization.InitializationEngine: Initialize action failed for 'Initialize on class EPiServer.Find.Framework.FrameworkInitializationModule, EPiServer.Find.Framework, Version=13.4.7.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7'
+System.TypeInitializationException: The type initializer for 'EPiServer.Find.Framework.SearchClient' threw an exception. ---> System.Configuration.ConfigurationErrorsException: The serviceUrl cannot be empty
+   at EPiServer.Find.Client.CreateFromConfig(Boolean bypassLicenseRestriction)
+   at EPiServer.Find.Framework.SearchClient..cctor()
+   --- End of inner exception stack trace ---
+   at EPiServer.Find.Framework.SearchClient.get_InternalInstance()
+   at EPiServer.Find.Framework.FrameworkInitializationModule.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.<>c__DisplayClass2_0.<Initialize>b__0()
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+System.TypeInitializationException: The type initializer for 'EPiServer.Find.Framework.SearchClient' threw an exception. ---> System.Configuration.ConfigurationErrorsException: The serviceUrl cannot be empty
+   at EPiServer.Find.Client.CreateFromConfig(Boolean bypassLicenseRestriction)
+   at EPiServer.Find.Framework.SearchClient..cctor()
+   --- End of inner exception stack trace ---
+   at EPiServer.Find.Framework.SearchClient.get_InternalInstance()
+   at EPiServer.Find.Framework.FrameworkInitializationModule.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.<>c__DisplayClass2_0.<Initialize>b__0()
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+2023-07-19 19:58:00,839 [1] ERROR EPiServer.Framework.Initialization.InitializationEngine: Initialize action failed for 'Initialize on class EPiServer.Data.DataInitialization, EPiServer.Data, Version=11.20.4.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7'
+System.NotSupportedException: The database schema for 'CMS' has not been updated to version '7067.0', current database version is '7063.0'. Update the database manually by running the cmdlet 'Update-EPiDatabase' in the package manager console or set updateDatabaseSchema="true" on episerver.framework configuration element.
+   at EPiServer.Data.SchemaUpdates.Internal.DatabaseSchemaManagerImplementation.ThrowUpdateDatabaseException(String displayName, Version databaseVersion, Version requiredVersion)
+   at EPiServer.Data.SchemaUpdates.Internal.DatabaseSchemaManagerImplementation.EnsureDatabaseSchema(DataAccessOptions dataAccessOptions)
+   at EPiServer.Data.DataInitialization.ValidateDatabaseSchema(InitializationEngine context)
+   at EPiServer.Data.DataInitialization.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.<>c__DisplayClass2_0.<Initialize>b__0()
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+System.NotSupportedException: The database schema for 'CMS' has not been updated to version '7067.0', current database version is '7063.0'. Update the database manually by running the cmdlet 'Update-EPiDatabase' in the package manager console or set updateDatabaseSchema="true" on episerver.framework configuration element.
+   at EPiServer.Data.SchemaUpdates.Internal.DatabaseSchemaManagerImplementation.ThrowUpdateDatabaseException(String displayName, Version databaseVersion, Version requiredVersion)
+   at EPiServer.Data.SchemaUpdates.Internal.DatabaseSchemaManagerImplementation.EnsureDatabaseSchema(DataAccessOptions dataAccessOptions)
+   at EPiServer.Data.DataInitialization.ValidateDatabaseSchema(InitializationEngine context)
+   at EPiServer.Data.DataInitialization.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.<>c__DisplayClass2_0.<Initialize>b__0()
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+2023-07-19 22:54:02,665 [1] ERROR EPiServer.Framework.Initialization.InitializationEngine: Initialize action failed for 'Initialize on class AddFindIndexcmsFram.ContentDeliveryApi.ContentApiInitialization, AddFindIndexcmsFram, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+System.NotImplementedException: The method or operation is not implemented.
+   at AddFindIndexcmsFram.ContentDeliveryApi.ContentApiInitialization.Initialize(InitializationEngine context) in C:\Users\pijus\source\repos\AddFindIndexcmsFram\AddFindIndexcmsFram\ContentDeliveryApi\ContentApiInitialization.cs:line 35
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.<>c__DisplayClass2_0.<Initialize>b__0()
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+System.NotImplementedException: The method or operation is not implemented.
+   at AddFindIndexcmsFram.ContentDeliveryApi.ContentApiInitialization.Initialize(InitializationEngine context) in C:\Users\pijus\source\repos\AddFindIndexcmsFram\AddFindIndexcmsFram\ContentDeliveryApi\ContentApiInitialization.cs:line 35
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.<>c__DisplayClass2_0.<Initialize>b__0()
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+2023-07-19 23:00:34,525 [8] ERROR EPiServer.Find.UI.Helpers.ExternalResourceHelper: Could not fetch https://dl.episerver.net/version.json, the following occured: System.AggregateException: One or more errors occurred. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at EPiServer.Find.UI.Helpers.ExternalResourceHelper.FetchVersionFromExternalResource[T](String urlToJsonFile)
+---> (Inner Exception #0) System.Threading.Tasks.TaskCanceledException: A task was canceled.<---
+
